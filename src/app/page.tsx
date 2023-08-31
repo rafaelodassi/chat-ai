@@ -9,9 +9,9 @@ export default function Chat() {
   const [text, setText] = useState("");
 
   return (
-    <main className="flex justify-center items-center min-h-screen">
-      <div className="p-8 flex flex-col bg-white w-[600px] h-[800px] items-center justify-center gap-4 rounded-md shadow-sm">
-        <section className="grow w-full overflow-y-auto">
+    <main className="flex justify-center items-center min-h-screen max-md:w-screen">
+      <div className="p-8 flex flex-col bg-white w-[600px] h-[800px] items-center justify-center gap-4 rounded-md shadow-sm max-md:w-screen max-md:h-screen max-md:p-4">
+        <section className="grow w-full overflow-auto">
           <ReactMarkdown>{text}</ReactMarkdown>
         </section>
         <form className="flex gap-3 w-full">
