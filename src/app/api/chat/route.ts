@@ -6,7 +6,7 @@ import { RetrievalQAChain } from "langchain/chains";
 import { RedisVectorStore } from "langchain/vectorstores/redis";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   const body = await req.json();
 
   const redis = createClient({
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   const redisVectorStore = new RedisVectorStore(
     new OpenAIEmbeddings({
-      openAIApiKey: "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",
+      openAIApiKey: "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",
     }),
     {
       indexName: "ai-test-index",
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   );
 
   const openAiChat = new ChatOpenAI({
-    openAIApiKey: "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",
+    openAIApiKey: "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",
     modelName: "gpt-3.5-turbo",
     temperature: 0.3,
   });
