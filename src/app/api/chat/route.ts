@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
   const redisVectorStore = new RedisVectorStore(
     new OpenAIEmbeddings({
-      openAIApiKey: "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",
+      openAIApiKey: process.env.OPENAI_API_KEY,
     }),
     {
       indexName: "ai-test-index",
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
   );
 
   const openAiChat = new ChatOpenAI({
-    openAIApiKey: "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",
+    openAIApiKey: process.env.OPENAI_API_KEY,
     modelName: "gpt-3.5-turbo",
     temperature: 0.3,
   });
