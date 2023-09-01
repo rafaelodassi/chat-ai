@@ -32,9 +32,9 @@ export async function POST(req: NextRequest) {
 
   const prompt = new PromptTemplate({
     template: `
-        Você responde perguntas sobre a api da plataforma Lecom.
+        Você responde perguntas sobre a vida profissional de Rafael Odassi.
         Se a resposta não foir encontrada nas transcrições, responda que você não sabe.
-        Se possível, inclua exemplos de código.
+        Se possível, inclua exemplos.
 
         Transcrições:
         {context}

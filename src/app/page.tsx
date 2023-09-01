@@ -21,7 +21,7 @@ export default function Chat() {
             onChange={(e) => {
               setValue(e.currentTarget.value);
             }}
-            placeholder="Pergunte sobre a APIJS..."
+            placeholder="Pergunte sobre a vida profissional de Rafael Odassi..."
           />
           <button
             className="p-3 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-all"
